@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS Learning Club – Cardinals | Apply</title>
+  <meta name="description" content="Join AWS Learning Club – Cardinals, the student tech community open to all students. Meet the Lead, explore the officer roles and apply today." />
+  <meta name="theme-color" content="#07060A" />
+  <meta property="og:title" content="AWS Learning Club – Cardinals" />
+  <meta property="og:description" content="It's always Day One. Meet the Lead, explore officer roles, see what you gain, and apply." />
+  <meta property="og:image" content="./logo-512.png" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Unbounded:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script>
+    document.documentElement.classList.add('js');
+    /* failsafe: never leave the page hidden if the script fails */
+    setTimeout(function () { document.documentElement.classList.add('ready'); }, 4200);
+  </script>
+</head>
+<body>
+  <div id="loader" aria-hidden="true">
+    <div class="ld-inner">
+      <div class="ld-logo"><img src="./logo-512.png" alt="" width="140" height="140" /></div>
+      <div class="ld-bar"><i id="ldBar"></i></div>
+      <span class="ld-num" id="ldNum">0</span>
+    </div>
+  </div>
+
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#top" aria-label="AWS Learning Club – Cardinals, home">
+      <img src="./logo-512.png" alt="" width="40" height="40" />
+      <span>Cardinals</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#lead">The Lead</a>
+      <a href="#roles">Roles</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#faq">FAQs</a>
+    </nav>
+    <a class="btn btn-sm nav-apply" href="#apply">Apply now</a>
+    <button type="button" class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><i></i><i></i></button>
+  </header>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="#about">About</a><a href="#lead">The Lead</a><a href="#roles">Roles</a><a href="#benefits">Benefits</a><a href="#faq">FAQs</a>
+    <a class="btn" href="#apply">Apply now</a>
+  </nav>
+  <button type="button" class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="m5 15 7-7 7 7"/></svg></button>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" id="heroBg" aria-hidden="true">CARDINALS</div>
+      <div class="hero-copy">
+        <p class="kicker">AWS Learning Club – Cardinals · Open to all students</p>
+        <h1 id="headline" aria-label="It's always Day One.">
+          <span class="w"><span>It's</span></span>
+          <span class="w"><span>always</span></span>
+          <span class="w red"><span>Day</span></span>
+          <span class="w red"><span>One.</span></span>
+        </h1>
+        <p class="lede">A student tech community open to every student. Turn your “one day” into Day One: learn, build, and lead with us.</p>
+        <div class="cta-row">
+          <a class="btn" href="#apply">Apply to join</a>
+          <a class="btn btn-ghost" href="#lead">Meet the Lead</a>
+        </div>
+      </div>
+
+      <div class="hero-art" id="heroArt">
+        <div class="orbit o1"><i></i></div>
+        <div class="orbit o2"><i></i></div>
+        <div class="orbit o3"><i></i></div>
+        <div class="glow"></div>
+        <img class="mascot" src="./logo.png" alt="AWS Learning Club – Cardinals mascot logo: a red cardinal in a black hoodie" width="520" height="520" />
+        <span class="px p1"></span><span class="px p2"></span><span class="px p3"></span><span class="px p4"></span>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to About"><span></span></a>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="track">
+        <span>Learn</span><b></b><span>Build</span><b></b><span>Lead</span><b></b><span>Connect</span><b></b><span>Grow</span><b></b>
+        <span>Learn</span><b></b><span>Build</span><b></b><span>Lead</span><b></b><span>Connect</span><b></b><span>Grow</span><b></b>
+        <span>Learn</span><b></b><span>Build</span><b></b><span>Lead</span><b></b><span>Connect</span><b></b><span>Grow</span><b></b>
+        <span>Learn</span><b></b><span>Build</span><b></b><span>Lead</span><b></b><span>Connect</span><b></b><span>Grow</span><b></b>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <div>
+          <h2 class="split-title">One club. Every campus in the city.</h2>
+          <p class="body reveal">Cardinals brings students from different schools and programs into one inclusive tech community. We learn cloud and technology together, build real projects, and connect with people already working in the industry.</p>
+          <p class="body reveal">The club runs on a centralized executive structure: an Executive Leadership, five offices, and a Creatives and Multimedia division. Every officer has a clear role and a clear way to contribute.</p>
+        </div>
+        <ul class="pillars reveal">
+          <li class="spot"><strong>Learning</strong><span>Workshops, study sessions and certification paths for every skill level.</span></li>
+          <li class="spot"><strong>Community</strong><span>An inclusive space where students from every school collaborate.</span></li>
+          <li class="spot"><strong>Industry</strong><span>Speakers, partners and sponsors who open doors beyond campus.</span></li>
+          <li class="spot"><strong>Projects</strong><span>Hands-on builds, events and campaigns with real responsibility.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- LEAD -->
+    <!-- <section class="section" id="lead"> 
+      <div class="wrap">
+        <div class="lead-card spot reveal" id="leadCard">
+          <div class="lead-photo" id="leadPhoto"></div>
+          <div class="lead-copy">
+            <p class="kicker static">Meet the Lead</p>
+            <h2 class="lead-name" id="leadName"></h2>
+            <p class="lead-title">Lead, AWS Learning Club – Cardinals</p>
+            <blockquote class="lead-quote" id="leadQuote" hidden></blockquote>
+            <p class="body">The Lead is the highest-ranking executive officer of Cardinals, responsible for the club's overall leadership, strategic direction and governance.</p>
+            <ul class="lead-does">
+              <li>Presides over Executive Leadership meetings</li>
+              <li>Guides plans, programs, projects and activities</li>
+              <li>Represents Cardinals to schools, partners and conferences</li>
+              <li>Keeps the club stable, secure and sustainable through every turnover</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- ROLES -->
+    <section class="section" id="roles">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="split-title">Roles, duties and responsibilities</h2>
+          <p class="body reveal">Pick an office to see what its officers do. This is a summary of the Constitution and By-Laws.</p>
+        </div>
+
+        <div class="common reveal">
+          <h3>Every officer commits to</h3>
+          <ul>
+            <li>Upholding the Constitution and By-Laws</li>
+            <li>Attending and joining official meetings and activities</li>
+            <li>Acting with integrity, accountability and respect</li>
+            <li>Protecting confidential information and avoiding conflicts of interest</li>
+            <li>Documenting and turning over records and resources</li>
+          </ul>
+        </div>
+
+        <div class="explorer">
+          <div class="tabs" role="tablist" aria-label="Offices" id="tabs"></div>
+          <div class="panel" id="panel" role="tabpanel" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS CAROUSEL -->
+    <section class="section" id="benefits">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="split-title">What you gain as a Cardinal</h2>
+          <p class="body reveal">Being an officer is more than a title. Drag, swipe or use the arrows to see what the club gives back.</p>
+        </div>
+      </div>
+      <div class="carousel reveal" id="carousel" role="region" aria-roledescription="carousel" aria-label="Benefits of joining Cardinals">
+        <div class="vp" id="vp"><div class="rail" id="rail"></div></div>
+        <div class="wrap ctrl">
+          <div class="bar" aria-hidden="true"><i id="cBar"></i></div>
+          <div class="dots" id="dots"></div>
+          <div class="btns">
+            <button type="button" class="arrow" id="prev" aria-label="Previous benefit"><svg viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg></button>
+            <button type="button" class="arrow" id="next" aria-label="Next benefit"><svg viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPLY -->
+    <section class="section" id="apply">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="split-title">Ready to ascend with us?</h2>
+          <p class="body reveal">Read the roles, choose where you fit, then complete the application form below.</p>
+        </div>
+
+        <div class="console reveal">
+          <div class="console-bar">
+            <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="console-title">cardinals / officer-application</span>
+            <a class="btn btn-sm" id="openForm" href="https://forms.gle/HCDZGW9ieUvwm27c9" target="_blank" rel="noopener">Open in new tab</a>
+          </div>
+          <div class="console-body">
+            <aside class="console-side">
+              <img src="./logo-512.png" alt="" width="130" height="130" />
+              <h3>Application form</h3>
+              <ul class="checks">
+                <li>Open to all students</li>
+                <li>Review the roles above before you apply</li>
+                <li>Use an email you check often</li>
+              </ul>
+              <p class="note">The form runs on Google Forms. If it doesn't load here, use <em>Open in new tab</em>.</p>
+            </aside>
+            <div class="frame">
+              <div class="skeleton" id="skel">
+                <div class="spinner"></div>
+                <p>Loading the application form</p>
+                <small>Nothing showing? Open the form in a new tab.</small>
+              </div>
+              <iframe id="formFrame" title="AWS Learning Club – Cardinals application form"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfvQaBUHf6bVp76mUHAkuRdWpsiXEb8BivioK4k5C4Qs2kMKA/viewform?embedded=true"
+                loading="lazy" referrerpolicy="no-referrer">Loading…</iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <div class="head"><h2 class="split-title">Questions before you apply</h2></div>
+        <div class="faq reveal" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap foot">
+      <div class="foot-brand">
+        <img src="./logo-512.png" alt="" width="64" height="64" />
+        <div>
+          <strong>AWS Learning Club – Cardinals</strong>
+          <span>The student tech community open to all.</span>
+        </div>
+      </div>
+      <div class="socials" id="socials"></div>
+      <p class="copy">© <span id="year-now"></span> AWS Learning Club – Cardinals. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

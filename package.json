@@ -1,0 +1,7 @@
+{
+  "name": "cardinals-apply",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AWS Learning Club – Cardinals application site",
+  "engines": { "node": ">=18" }
+}
