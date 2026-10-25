@@ -6,7 +6,7 @@
   var CONFIG = {
     // Fill these in. Empty values are hidden or shown as placeholders.
     lead: {
-      name: '',      // example: 'Juan Dela Cruz'
+      name: 'John L. Palangeo',      // example: 'Juan Dela Cruz'
       photo: '',     // example: './lead.jpg' (put the image file in this folder)
       message: ''    // optional short quote from the Lead
     },
