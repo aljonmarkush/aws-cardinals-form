@@ -291,9 +291,11 @@
   function watch(n) { if (io) io.observe(n); else n.classList.add('in'); }
   $$('.reveal,.split-title').forEach(watch);
 
-  /* ---------- Lead ---------- */
+  /* ---------- Lead (Skipped if hidden) ---------- */
   (function lead() {
-    var L = CONFIG.lead, nm = $('#leadName'), ph = $('#leadPhoto'), q = $('#leadQuote');
+    var nm = $('#leadName');
+    if (!nm) return; // Exit if the lead section is hidden/commented out
+    var L = CONFIG.lead, ph = $('#leadPhoto'), q = $('#leadQuote');
     if (L.name) nm.textContent = L.name; else { nm.textContent = 'Name of the Lead'; nm.classList.add('empty'); }
     if (L.photo) { var im = el('img', 'ph'); im.src = L.photo; im.alt = 'Portrait of ' + (L.name || 'the Lead'); ph.appendChild(im); }
     else { var f = el('img', 'fallback'); f.src = './logo-512.png'; f.alt = ''; ph.appendChild(f); }
@@ -442,7 +444,8 @@
           links.forEach(function (l) { l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id); });
         });
       }, { rootMargin: '-45% 0px -50% 0px' });
-      ['about', 'lead', 'roles', 'benefits', 'faq'].forEach(function (id) { var s = document.getElementById(id); if (s) so.observe(s); });
+      // Removed 'lead' from observation since it is currently commented out
+      ['about', 'roles', 'benefits', 'faq'].forEach(function (id) { var s = document.getElementById(id); if (s) so.observe(s); });
     }
   })();
 
